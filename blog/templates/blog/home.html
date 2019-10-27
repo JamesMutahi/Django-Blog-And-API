@@ -1,6 +1,9 @@
 {% extends "blog/base.html" %}
 {% block content %}
 {% for post in posts %}
+<form action="{% url 'search_results' %}" method="get">
+  <input name="q" type="text" placeholder="Search...">
+</form>
 <article class="media content-section">
     <div class="media-body">
         <div class="article-metadata">
